@@ -1,20 +1,26 @@
 
-import 'package:flutter/foundation.dart';
+import 'package:coach_me/data/auth_repository.dart';
 
 import '../utils/result.dart';
 
 
-abstract class AuthRepository extends ChangeNotifier {
-  /// Returns true when the user is logged in
-  /// Returns [Future] because it will load a stored auth state the first time.
-  Future<bool> get isAuthenticated;
+class AuthRepositoryDev extends AuthRepository {
+  /// User is always authenticated in dev scenarios
+  @override
+  Future<bool> get isAuthenticated => Future.value(false);
 
-  /// Perform login
+  /// Login is always successful in dev scenarios
+  @override
   Future<Result<void>> login({
     required String email,
     required String password,
-  });
+  }) async {
+    return const Result.ok(null);
+  }
 
-  /// Perform logout
-  Future<Result<void>> logout();
+  /// Logout is always successful in dev scenarios
+  @override
+  Future<Result<void>> logout() async {
+    return const Result.ok(null);
+  }
 }

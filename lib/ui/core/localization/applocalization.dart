@@ -13,14 +13,15 @@ class AppLocalization {
   }
 
   static const _strings = <String, String>{
-    'activities': 'Activities',
-    'addDates': 'Add Dates',
-    'bookingDeleted': 'Booking deleted',
-    'bookNewTrip': 'Book New Trip',
-    'close': 'Close',
-    'confirm': 'Confirm',
-    'daytime': 'Daytime',
-    'errorWhileDeletingBooking': 'Error while deleting booking',
+    'loginTitle': 'Entrar',
+    'emailLabel': 'E-mail',
+    'passwordLabel': 'Senha',
+    'rememberMe': 'Lembrar-me',
+    'forgotPassword': 'Esqueceu sua senha?',
+    'loginButton': 'Entrar',
+    'registerHere': 'Cadastre-se aqui!',
+    'dontHaveAnAccount': 'Não tem uma conta?'
+    /*'errorWhileDeletingBooking': 'Error while deleting booking',
     'errorWhileLoadingActivities': 'Error while loading activities',
     'errorWhileLoadingBooking': 'Error while loading booking',
     'errorWhileLoadingContinents': 'Error while loading continents',
@@ -40,28 +41,42 @@ class AppLocalization {
     'shareTrip': 'Share Trip',
     'tryAgain': 'Try again',
     'yourChosenActivities': 'Your chosen activities',
-    'when': 'When',
+    'when': 'When',*/
   };
+
+
+  /*{
+  "loginTitle": "Entrar",
+  "loginSubtitle": "Comida fresca entregue.",
+  "emailLabel": "E-mail",
+  "passwordLabel": "Senha",
+  "rememberMe": "Lembrar-me",
+  "forgotPassword": "Esqueceu sua senha?",
+  "loginButton": "Entrar",
+  "registerHere": "Cadastre-se aqui!"
+  }*/
 
   // If string for "label" does not exist, will show "[LABEL]"
   static String _get(String label) =>
       _strings[label] ?? '[${label.toUpperCase()}]';
 
-  String get activities => _get('activities');
+  String get loginTitle => _get('loginTitle');
 
-  String get addDates => _get('addDates');
+  String get emailLabel => _get('emailLabel');
 
-  String get confirm => _get('confirm');
+  String get passwordLabel => _get('passwordLabel');
 
-  String get daytime => _get('daytime');
+  String get rememberMe => _get('rememberMe');
 
-  String get errorWhileLoadingActivities => _get('errorWhileLoadingActivities');
+  String get forgotPassword => _get('forgotPassword');
 
-  String get errorWhileLoadingBooking => _get('errorWhileLoadingBooking');
+  String get loginButton => _get('loginButton');
 
-  String get errorWhileLoadingContinents => _get('errorWhileLoadingContinents');
+  String get registerHere => _get('registerHere');
 
-  String get errorWhileLoadingDestinations =>
+  String get dontHaveAnAccount => _get('dontHaveAnAccount');
+
+  /*String get errorWhileLoadingDestinations =>
       _get('errorWhileLoadingDestinations');
 
   String get errorWhileSavingActivities => _get('errorWhileSavingActivities');
@@ -103,7 +118,7 @@ class AppLocalization {
   String nameTrips(String name) => _get('nameTrips').replaceAll('{name}', name);
 
   String selected(int value) =>
-      _get('selected').replaceAll('{1}', value.toString());
+      _get('selected').replaceAll('{1}', value.toString());*/
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {

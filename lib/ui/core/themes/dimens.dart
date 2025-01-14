@@ -7,6 +7,18 @@ import 'package:flutter/material.dart';
 abstract final class Dimens {
   const Dimens();
 
+  static const loginCardMinWidth = 200.0;
+
+  static const loginCardMaxWidth = 550.0;
+
+  static const padding12 = 12.0;
+
+  static const padding8 = 8.0;
+
+  static const padding32 = 32.0;
+
+  static const padding16 = 16.0;
+
   /// General horizontal padding used to separate UI items
   static const paddingHorizontal = 20.0;
 
@@ -20,6 +32,18 @@ abstract final class Dimens {
   double get paddingScreenVertical;
 
   double get profilePictureSize;
+
+  double get paddingScreen16;
+
+  double get paddingScreen32;
+
+  double get paddingScreen8;
+
+  double get paddingScreen12;
+
+  double get loginCardMinWidhtScreen;
+
+  double get loginCardMaxWidhtScreen;
 
   /// Horizontal symmetric padding for screen edges
   EdgeInsets get edgeInsetsScreenHorizontal =>
@@ -51,7 +75,26 @@ final class _DimensMobile extends Dimens {
   @override
   final double profilePictureSize = 64.0;
 
+  @override
+  double get paddingScreen16 => Dimens.padding16;
+
+  @override
+  double get paddingScreen32 => Dimens.padding32;
+
+  @override
+  double get paddingScreen8 => Dimens.padding8;
+
+  @override
+  double get paddingScreen12 => Dimens.padding12;
+
   const _DimensMobile();
+
+  @override
+  double get loginCardMinWidhtScreen => Dimens.loginCardMinWidth;
+
+  @override
+  double get loginCardMaxWidhtScreen => Dimens.loginCardMaxWidth;
+
 }
 
 /// Desktop/Web dimensions
@@ -65,5 +108,24 @@ final class _DimensDesktop extends Dimens {
   @override
   final double profilePictureSize = 128.0;
 
+  @override
+  double get paddingScreen16 => 16;
+
+  @override
+  double get paddingScreen32 => 32.0;
+
   const _DimensDesktop();
+
+  @override
+  double get paddingScreen8 => 8;
+
+  @override
+  double get paddingScreen12 => Dimens.padding12;
+
+  @override
+  double get loginCardMinWidhtScreen => Dimens.loginCardMinWidth;
+
+  @override
+  double get loginCardMaxWidhtScreen => Dimens.loginCardMaxWidth;
+
 }
