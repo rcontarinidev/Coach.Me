@@ -98,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green.shade700,
+                        backgroundColor: Theme.of(context).colorScheme.onPrimary,
                         padding: EdgeInsets.symmetric(
                             vertical: Dimens.of(context).paddingScreen16),
                         shape: RoundedRectangleBorder(
@@ -122,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {},
                       child: Text(
                         AppLocalization.of(context).registerHere,
-                        style: TextStyle(color: Colors.green.shade700),
+                        style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
                       ),
                     ),
                   ],

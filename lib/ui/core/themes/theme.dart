@@ -67,18 +67,4 @@ abstract final class AppTheme {
       ),*/
     ],
   );
-
-  static ThemeData darkTheme = ThemeData(
-    useMaterial3: true,
-    brightness: Brightness.dark,
-    colorScheme: AppColors.darkColorScheme,
-    textTheme: _textTheme,
-    inputDecorationTheme: _inputDecorationTheme,
-    extensions: [
-      /*TagChipTheme(
-        chipColor: AppColors.blackTransparent,
-        onChipColor: Colors.white,
-      ),*/
-    ],
-  );
 }

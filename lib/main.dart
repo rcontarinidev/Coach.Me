@@ -28,7 +28,6 @@ class App extends StatelessWidget {
       ],
       scrollBehavior: AppCustomScrollBehavior(),
       theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       routerConfig: router(context.read()),
     );
