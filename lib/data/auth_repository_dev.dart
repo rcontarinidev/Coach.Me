@@ -7,7 +7,7 @@ import '../utils/result.dart';
 class AuthRepositoryDev extends AuthRepository {
   /// User is always authenticated in dev scenarios
   @override
-  Future<bool> get isAuthenticated => Future.value(false);
+  Future<bool> get isAuthenticated => Future.value(true);
 
   /// Login is always successful in dev scenarios
   @override

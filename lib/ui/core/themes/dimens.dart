@@ -8,16 +8,12 @@ abstract final class Dimens {
   const Dimens();
 
   static const loginCardMinWidth = 200.0;
-
   static const loginCardMaxWidth = 550.0;
 
-  static const padding12 = 12.0;
-
-  static const padding8 = 8.0;
-
-  static const padding32 = 32.0;
-
-  static const padding16 = 16.0;
+  static const paddingSmall = 8.0;
+  static const paddingMedium = 12.0;
+  static const paddingLarge = 16.0;
+  static const paddingExtraLarge = 32.0;
 
   /// General horizontal padding used to separate UI items
   static const paddingHorizontal = 20.0;
@@ -33,17 +29,13 @@ abstract final class Dimens {
 
   double get profilePictureSize;
 
-  double get paddingScreen16;
+  double get paddingSmallScreen;
+  double get paddingMediumScreen;
+  double get paddingLargeScreen;
+  double get paddingExtraLargeScreen;
 
-  double get paddingScreen32;
-
-  double get paddingScreen8;
-
-  double get paddingScreen12;
-
-  double get loginCardMinWidhtScreen;
-
-  double get loginCardMaxWidhtScreen;
+  double get loginCardMinWidthScreen;
+  double get loginCardMaxWidthScreen;
 
   /// Horizontal symmetric padding for screen edges
   EdgeInsets get edgeInsetsScreenHorizontal =>
@@ -76,24 +68,24 @@ final class _DimensMobile extends Dimens {
   final double profilePictureSize = 64.0;
 
   @override
-  double get paddingScreen16 => Dimens.padding16;
+  double get paddingLargeScreen => Dimens.paddingLarge;
 
   @override
-  double get paddingScreen32 => Dimens.padding32;
+  double get paddingExtraLargeScreen => Dimens.paddingExtraLarge;
 
   @override
-  double get paddingScreen8 => Dimens.padding8;
+  double get paddingSmallScreen => Dimens.paddingSmall;
 
   @override
-  double get paddingScreen12 => Dimens.padding12;
+  double get paddingMediumScreen => Dimens.paddingMedium;
 
   const _DimensMobile();
 
   @override
-  double get loginCardMinWidhtScreen => Dimens.loginCardMinWidth;
+  double get loginCardMinWidthScreen => Dimens.loginCardMinWidth;
 
   @override
-  double get loginCardMaxWidhtScreen => Dimens.loginCardMaxWidth;
+  double get loginCardMaxWidthScreen => Dimens.loginCardMaxWidth;
 
 }
 
@@ -109,23 +101,23 @@ final class _DimensDesktop extends Dimens {
   final double profilePictureSize = 128.0;
 
   @override
-  double get paddingScreen16 => 16;
+  double get paddingLargeScreen => 16;
 
   @override
-  double get paddingScreen32 => 32.0;
+  double get paddingExtraLargeScreen => 32.0;
 
   const _DimensDesktop();
 
   @override
-  double get paddingScreen8 => 8;
+  double get paddingSmallScreen => 8;
 
   @override
-  double get paddingScreen12 => Dimens.padding12;
+  double get paddingMediumScreen => Dimens.paddingMedium;
 
   @override
-  double get loginCardMinWidhtScreen => Dimens.loginCardMinWidth;
+  double get loginCardMinWidthScreen => Dimens.loginCardMinWidth;
 
   @override
-  double get loginCardMaxWidhtScreen => Dimens.loginCardMaxWidth;
+  double get loginCardMaxWidthScreen => Dimens.loginCardMaxWidth;
 
 }

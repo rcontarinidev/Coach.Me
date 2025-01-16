@@ -5,14 +5,15 @@ import 'package:coach_me/ui/core/themes/theme.dart';
 import 'package:coach_me/ui/core/ui/scroll.behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-      MultiProvider(
-        providers: providersLocal,
-        child: const App(),
-      ));
+  runApp(ProviderScope(
+      child: MultiProvider(
+    providers: providersLocal,
+    child: const App(),
+  )));
 }
 
 class App extends StatelessWidget {
